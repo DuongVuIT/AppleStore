@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AppleStoreModelStoreContainer" CdmEntityContainer="AppleStoreEntities">
+    <EntitySetMapping Name="Chi_Tiet_Don_Hang">
+      <EntityTypeMapping TypeName="AppleStoreModel.Chi_Tiet_Don_Hang">
+        <MappingFragment StoreEntitySet="Chi_Tiet_Don_Hang">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="tonggia" ColumnName="tonggia" />
+          <ScalarProperty Name="idSP" ColumnName="idSP" />
+          <ScalarProperty Name="idDonHang" ColumnName="idDonHang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Don_Hang">
+      <EntityTypeMapping TypeName="AppleStoreModel.Don_Hang">
+        <MappingFragment StoreEntitySet="Don_Hang">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="tieude" ColumnName="tieude" />
+          <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="idtrangthai" ColumnName="idtrangthai" />
+          <ScalarProperty Name="idNgDung" ColumnName="idNgDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_San_Pham">
+      <EntityTypeMapping TypeName="AppleStoreModel.Loai_San_Pham">
+        <MappingFragment StoreEntitySet="Loai_San_Pham">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tenloaiSP" ColumnName="tenloaiSP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nguoi_Dung">
+      <EntityTypeMapping TypeName="AppleStoreModel.Nguoi_Dung">
+        <MappingFragment StoreEntitySet="Nguoi_Dung">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="quyen" ColumnName="quyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="San_Pham">
+      <EntityTypeMapping TypeName="AppleStoreModel.San_Pham">
+        <MappingFragment StoreEntitySet="San_Pham">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+          <ScalarProperty Name="hinh" ColumnName="hinh" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+          <ScalarProperty Name="ngaydanghinh" ColumnName="ngaydanghinh" />
+          <ScalarProperty Name="idloaiSP" ColumnName="idloaiSP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AppleStoreModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trang_Thai">
+      <EntityTypeMapping TypeName="AppleStoreModel.Trang_Thai">
+        <MappingFragment StoreEntitySet="Trang_Thai">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

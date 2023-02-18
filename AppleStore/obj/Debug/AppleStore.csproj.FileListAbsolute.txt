@@ -77,3 +77,5 @@ E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\obj\Debug\AppleS
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\obj\Debug\AppleStore.csproj.CopyComplete
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\obj\Debug\AppleStore.dll
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\obj\Debug\AppleStore.pdb
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.xml

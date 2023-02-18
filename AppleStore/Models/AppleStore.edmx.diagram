@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc3063ea580f46fba38d87da70c1cb1e" Name="Diagram1">
+        <EntityTypeShape EntityType="AppleStoreModel.Chi_Tiet_Don_Hang" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppleStoreModel.Don_Hang" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppleStoreModel.Loai_San_Pham" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppleStoreModel.Nguoi_Dung" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppleStoreModel.San_Pham" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppleStoreModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AppleStoreModel.Trang_Thai" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="AppleStoreModel.FK_Chi_Tiet_Don_Hang_Don_Hang" ManuallyRouted="false" />
+        <AssociationConnector Association="AppleStoreModel.FK_Chi_Tiet_Don_Hang_San_Pham" ManuallyRouted="false" />
+        <AssociationConnector Association="AppleStoreModel.FK_Don_Hang_Nguoi_Dung" ManuallyRouted="false" />
+        <AssociationConnector Association="AppleStoreModel.FK_Don_Hang_Trang_Thai" ManuallyRouted="false" />
+        <AssociationConnector Association="AppleStoreModel.FK_San_Pham_Loai_San_Pham" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

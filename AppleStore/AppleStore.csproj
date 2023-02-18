@@ -45,10 +45,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -122,12 +128,49 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppleStore.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppleStore.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppleStore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppleStore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppleStore.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Chi_Tiet_Don_Hang.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Don_Hang.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Loai_San_Pham.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Nguoi_Dung.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\San_Pham.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Trang_Thai.cs">
+      <DependentUpon>AppleStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -359,6 +402,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\AppleStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppleStore.edmx</DependentUpon>
+      <LastGenOutput>AppleStore.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppleStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppleStore.edmx</DependentUpon>
+      <LastGenOutput>AppleStore.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\assets\bootstrap\css\bootstrap-grid.css.map" />
@@ -422,6 +475,15 @@
     <Content Include="Areas\Admin\Content\font\glyphiconshalflings-regular.woff" />
     <Content Include="Areas\Admin\Content\login\images\Thumbs.db" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <EntityDeploy Include="Models\AppleStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppleStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AppleStore.edmx.diagram">
+      <DependentUpon>AppleStore.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -452,8 +514,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\ProduceDetails\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -467,6 +527,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
