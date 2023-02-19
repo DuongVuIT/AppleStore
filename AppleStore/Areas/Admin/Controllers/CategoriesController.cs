@@ -2,6 +2,7 @@
 using AppleStore.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -48,6 +49,19 @@ namespace AppleStore.Areas.Admin.Controllers
         {
             var lsp = db.Loai_San_Pham.Where(n=>n.id == loai_sp.id).FirstOrDefault();
             db.Loai_San_Pham.Remove(lsp);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult Edit (int id)
+        {
+            var lsp = db.Loai_San_Pham.Where (n => n.id == id).FirstOrDefault();
+            return View(lsp);
+        }
+        [HttpPost]
+        public ActionResult Edit (int id, Loai_San_Pham lsp)
+        {
+            db.Entry(lsp).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
