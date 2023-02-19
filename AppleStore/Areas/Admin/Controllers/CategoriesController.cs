@@ -10,6 +10,7 @@ namespace AppleStore.Areas.Admin.Controllers
 {
     public class CategoriesController : Controller
     {
+        
         AppleStoreEntities db = new AppleStoreEntities();
         // GET: Admin/Categories
         public ActionResult Index()
@@ -24,11 +25,33 @@ namespace AppleStore.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create( Loai_San_Pham lsp)
+        public ActionResult Create(Loai_San_Pham lsp)
         {
             db.Loai_San_Pham.Add(lsp);
             db.SaveChanges();
             return RedirectToAction("index");
         }
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var lsp = db.Loai_San_Pham.Where(n => n.id == id).FirstOrDefault();
+            return View(lsp);
+        }
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var lsp = db.Loai_San_Pham.Where(n => n.id == id).FirstOrDefault();
+            return View(lsp);
+        }
+        [HttpPost]
+        public ActionResult Delete (Loai_San_Pham loai_sp)
+        {
+            var lsp = db.Loai_San_Pham.Where(n=>n.id == loai_sp.id).FirstOrDefault();
+            db.Loai_San_Pham.Remove(lsp);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        
+    
     }
 }
