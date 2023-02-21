@@ -52,7 +52,7 @@ namespace AppleStore.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        [HttpPost]
+        [HttpGet]
         public ActionResult Edit (int id)
         {
             var lsp = db.Loai_San_Pham.Where (n => n.id == id).FirstOrDefault();
