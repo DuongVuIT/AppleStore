@@ -1,0 +1,75 @@
+﻿@model AppleStore.Models.San_Pham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>San_Pham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinh)
+        </dt>
+
+        <dd>
+            <div id="Hinh"><img src="@Url.Content("~/Images/"+Model.hinh)" width="100" height="100" /></div>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydanghinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydanghinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idloaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idloaiSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -11,14 +11,15 @@ namespace AppleStore.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class San_Pham
     {
         public San_Pham()
         {
             this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
         }
-    
+        [Display(Name = "Tên s?n ph?m")]
         public int id { get; set; }
         public string tenSP { get; set; }
         public string hinh { get; set; }

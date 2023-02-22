@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppleStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,11 @@ namespace AppleStore.Controllers
 {
     public class HomeController : Controller
     {
+        AppleStoreEntities db = new AppleStoreEntities();
         public ActionResult Index()
         {
-            return View();
+            
+            return View(db.San_Pham.ToList());
         }
 
         public ActionResult About()
