@@ -79,3 +79,7 @@ E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\obj\Debug\AppleS
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\obj\Debug\AppleStore.pdb
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.dll
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\PagedList.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\PagedList.Mvc.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\PagedList.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\PagedList.Mvc.xml

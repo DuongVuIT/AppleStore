@@ -14,6 +14,7 @@ namespace AppleStore.Models
     
         public int id { get; set; }
         [Display (Name = "Tên lo?i s?n ph?m")]
+        [Required]
         public string tenloaiSP { get; set; }
     
         public virtual ICollection<San_Pham> San_Pham { get; set; }

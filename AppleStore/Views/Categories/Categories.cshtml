@@ -1,0 +1,9 @@
+﻿@using AppleStore.Models;
+@model List<Loai_San_Pham>
+
+@foreach (var item in Model)
+{
+    <li ><a href="@Url.Action("ProductsCategories", new { id = item.id})">@item.tenloaiSP</a></li>
+}
+
+
