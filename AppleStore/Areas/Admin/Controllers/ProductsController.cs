@@ -17,7 +17,15 @@ namespace AppleStore.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var sp = db.San_Pham.ToList();
-            return View(sp);
+            if (Session["id"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View(sp);
+            }
+            
         }
         [HttpGet]
         public ActionResult Create()

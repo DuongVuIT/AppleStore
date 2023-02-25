@@ -18,7 +18,15 @@ namespace AppleStore.Areas.Admin.Controllers
         {
             var lsp = db.Loai_San_Pham.ToList();
 
-            return View(lsp);
+            if (Session["id"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View(lsp);
+            }
+            
         }
         [HttpGet]
         public ActionResult Create()

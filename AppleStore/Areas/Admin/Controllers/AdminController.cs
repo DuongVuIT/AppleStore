@@ -13,7 +13,15 @@ namespace AppleStore.Areas.Admin.Controllers
         AppleStoreEntities db = new AppleStoreEntities();
         public ActionResult Index()
         {
-            return View();
+            if (Session["id"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                return View();
+            }
+            
         }
         [HttpGet]
         public ActionResult Login()
