@@ -3,6 +3,7 @@ namespace AppleStore.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
     public partial class Loai_San_Pham
@@ -13,7 +14,7 @@ namespace AppleStore.Models
         }
     
         public int id { get; set; }
-        [Display (Name = "Tên lo?i s?n ph?m")]
+        [DisplayName("Tên lo?i s?n ph?m")]
         [Required]
         public string tenloaiSP { get; set; }
     

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<AppleStore.Models.Loai_San_Pham>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+@model IEnumerable<AppleStore.Models.Loai_San_Pham>
 
 @{
     ViewBag.Title = "Index";
@@ -8,10 +9,11 @@
 <h2>Index</h2>
 
 <p style = "text-align:center" >
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới loại sản phẩm", "Create")
 </p>
 <table class="table">
     <tr>
+        
         <th>
             @Html.DisplayNameFor(model => model.tenloaiSP)
         </th>

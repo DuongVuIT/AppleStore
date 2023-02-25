@@ -1,0 +1,57 @@
+﻿@model AppleStore.Models.Nguoi_Dung
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="~/Areas/Admin/Content/login/Form--main/index.css">
+    <title>LOGIN ADMIN </title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            @using (Html.BeginForm("Login", "Admin", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-value">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <form action="">
+                        <h2>Login</h2>
+                        <div class="inputbox">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <input type="text" name="taikhoan" required>
+                            <label for="">UserName</label>
+
+
+
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" name="matkhau" required>
+                            <label for="">Password</label>
+
+
+                        </div>
+                        <div class="forget">
+                            <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
+
+                        </div>
+                        <button>Log in</button>
+                        <div class="register">
+                            <p>Don't have a account <a href="#">Register</a></p>
+                        </div>
+                        
+                    </form>
+                </div>
+            }
+        </div>
+        
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

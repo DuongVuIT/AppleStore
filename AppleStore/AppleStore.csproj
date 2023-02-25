@@ -327,14 +327,9 @@
     <Content Include="Areas\Admin\Content\js\jquery.uploadify-3.1.min.js" />
     <Content Include="Areas\Admin\Content\js\modernizr.js" />
     <Content Include="Areas\Admin\Content\js\retina.js" />
-    <Content Include="Areas\Admin\Content\login\css\style.css" />
-    <Content Include="Areas\Admin\Content\login\images\banner1.jpg" />
-    <Content Include="Areas\Admin\Content\login\images\fac.png" />
-    <Content Include="Areas\Admin\Content\login\images\l.png" />
-    <Content Include="Areas\Admin\Content\login\images\m.png" />
-    <Content Include="Areas\Admin\Content\login\images\tick.png" />
-    <Content Include="Areas\Admin\Content\login\images\twitter.png" />
-    <Content Include="Areas\Admin\Content\login\js\jquery.min.js" />
+    <Content Include="Areas\Admin\Content\login\Form--main\background6.jpg" />
+    <Content Include="Areas\Admin\Content\login\Form--main\index.css" />
+    <Content Include="Areas\Admin\Content\login\Form--main\index.html" />
     <Content Include="Content\assets\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\assets\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\assets\bootstrap\css\bootstrap-reboot.css" />
@@ -483,7 +478,6 @@
     <Content Include="Areas\Admin\Content\font\glyphiconshalflings-regular.eot" />
     <Content Include="Areas\Admin\Content\font\glyphiconshalflings-regular.ttf" />
     <Content Include="Areas\Admin\Content\font\glyphiconshalflings-regular.woff" />
-    <Content Include="Areas\Admin\Content\login\images\Thumbs.db" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
@@ -502,6 +496,7 @@
     <Content Include="Areas\Admin\Views\Products\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Login.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -534,6 +529,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

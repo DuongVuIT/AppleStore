@@ -1,4 +1,6 @@
-﻿@model IEnumerable<AppleStore.Models.San_Pham>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+@model IEnumerable<AppleStore.Models.San_Pham>
 
 @{
     ViewBag.Title = "Index";
@@ -7,7 +9,7 @@
 
 <h2>Index</h2>
 
-<p>
+<p style="text-align:center">
     @Html.ActionLink("Thêm mới sản phẩm", "Create")
 </p>
 <table class="table">
@@ -36,35 +38,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.tenSP)
-        </td>
-        <td>
-            <div><img src="@Url.Content("~/Images/"+item.hinh)" width="80" height="60"/></div>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.mota)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.trangthai)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ngaydanghinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Loai_San_Pham.tenloaiSP)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenSP)
+            </td>
+            <td>
+                <div><img src="@Url.Content("~/Images/"+item.hinh)" width="80" height="60" /></div>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trangthai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaydanghinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Loai_San_Pham.tenloaiSP)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
 
 </table>

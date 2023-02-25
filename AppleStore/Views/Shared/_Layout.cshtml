@@ -31,7 +31,7 @@
 
 </head>
 <body>
-    
+
     <!--PreLoader-->
     <div class="loader">
         <div class="loader-inner">
@@ -41,14 +41,14 @@
     <!--PreLoader Ends-->
     <!-- header -->
     <div class="top-header-area" id="sticker">
-         
-        
+
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 text-center">
                     <div class="main-menu-wrap">
                         <!-- logo -->
-                        <div style ="" class="site-logo">
+                        <div style="" class="site-logo">
                             <a href="@Url.Action("Index","Home")">
                                 <img src="/Content/assets/img/logoto.png" alt="">
                             </a>
@@ -56,12 +56,26 @@
                         <!-- logo -->
                         <!-- menu start -->
                         <nav class="main-menu">
+
                             <ul>
-                                
+                                <li class="current-list-item">
+                                    <a href="@Url.Action("Index","Home")">Home</a>
+
+                                </li>
+                                <li><a href="@Url.Action("Index","Home")">About</a></li>
+                                <li>
+
+
+                                </li>
+                                <li><a href="@Url.Action("Index","Home")">Contact</a></li>
+                                <li>
+                                    <a href="@Url.Action("Index","Home")">Shop</a>
+                                </li>
+                                <li>
                                 <li>
                                     <div class="header-icons">
                                         <a class="shopping-cart" href="@Url.Action("Cart","Cart")"><i class="fas fa-shopping-cart"></i></a>
-                                       
+
                                         <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                                     </div>
                                 </li>
@@ -70,6 +84,7 @@
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                         <div class="mobile-menu"></div>
                         <!-- menu end -->
+
                     </div>
                 </div>
             </div>
@@ -112,7 +127,33 @@
     @RenderBody();
     <!-- end products -->
     <!-- logo carousel -->
-    
+    <!-- logo carousel -->
+    <div class="logo-carousel-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo-carousel-inner">
+                        <div class="single-logo-item">
+                            <img src="/Content/assets/img/company-logos/1.png" alt="">
+                        </div>
+                        <div class="single-logo-item">
+                            <img src="/Content/assets/img/company-logos/2.png" alt="">
+                        </div>
+                        <div class="single-logo-item">
+                            <img src="/Content/assets/img/company-logos/3.png" alt="">
+                        </div>
+                        <div class="single-logo-item">
+                            <img src="/Content/assets/img/company-logos/4.png" alt="">
+                        </div>
+                        <div class="single-logo-item">
+                            <img src="/Content/assets/img/company-logos/5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end logo carousel -->
     <!-- end logo carousel -->
     <!-- footer -->
     <div class="footer-area">
@@ -136,8 +177,8 @@
                     </div>
                 </div>
 
-               
-                
+
+
             </div>
         </div>
     </div>
