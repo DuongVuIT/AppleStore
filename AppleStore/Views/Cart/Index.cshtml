@@ -62,9 +62,9 @@
 <div class="cart-section mt-150 mb-150">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12">
-                @if (Model != null)
-                {
+            @if (Model != null)
+            {
+                <div class="col-lg-8 col-md-12">
                     <div class="cart-table-wrap">
                         <table class="cart-table">
                             <thead class="cart-table-head">
@@ -94,47 +94,45 @@
                             </tbody>
                         </table>
                     </div>
-                }
-                else
-                {
-                    <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
-                }
 
-
-            </div>
-
-            <div class="col-lg-4">
-                <div class="total-section">
-                    <table class="total-table">
-                        <thead class="total-table-head">
-                            <tr class="table-total-row">
-                                <th>Total</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="total-data">
-                                <td><strong>Subtotal: </strong></td>
-                                <td>$500</td>
-                            </tr>
-                            <tr class="total-data">
-                                <td><strong>Shipping: </strong></td>
-                                <td>$45</td>
-                            </tr>
-                            <tr class="total-data">
-                                <td><strong>Total: </strong></td>
-                                <td>$545</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="cart-buttons">
-                        <a href="" class="boxed-btn" id="updatecart">Update Cart</a>
-                        <a href="@Url.Action("Checkout","Checkout")" class="boxed-btn black">Check Out</a>
-                    </div>
                 </div>
+                <div class="col-lg-4">
+                    <div class="total-section">
+                        <table class="total-table">
+                            <thead class="total-table-head">
+                                <tr class="table-total-row">
+                                    <th>Total</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="total-data">
+                                    <td><strong>Subtotal: </strong></td>
+                                    <td>
+                                        @if (Session["cart"] != null)
+                                        {
+                                            <a class="primary-btn ">
+                                                @(Model.Sum(n => n.Quantity * n.San_Pham.gia.GetValueOrDefault(0)).ToString("N0")) VND
+                                            </a>
+                                        }
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="cart-buttons">
+                            <a href="" class="boxed-btn" id="updatecart">Update Cart</a>
+                            <a href="@Url.Action("Checkout","Checkout")" class="boxed-btn black">Check Out</a>
+                        </div>
+                    </div>
 
 
-            </div>
+                </div>
+            }
+            else
+            {
+                <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
+            }
         </div>
     </div>
 </div>
+

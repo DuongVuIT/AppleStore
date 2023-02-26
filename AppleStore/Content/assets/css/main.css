@@ -509,7 +509,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
         left: 0;
         top: 0;
         width: 100%;
-        height: 80%;
+        height: 100%;
         content: "";
         background-color: #07212e;
         z-index: -1;

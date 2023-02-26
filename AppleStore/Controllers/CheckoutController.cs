@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppleStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,13 +10,10 @@ namespace AppleStore.Controllers
     public class CheckoutController : Controller
     {
         // GET: Checkout
-        public ActionResult Index()
-        {
-            return View();
-        }
+
         public ActionResult Checkout()
         {
-            return View();
+            return View((List<Cart>)Session["cart"]);
         }
     }
 }

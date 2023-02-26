@@ -137,6 +137,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
@@ -531,6 +532,7 @@
     <Content Include="Views\Categories\Categories.cshtml" />
     <Content Include="Views\Categories\ProductsCategories.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
