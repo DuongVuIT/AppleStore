@@ -4,7 +4,32 @@
     ViewBag.Title = "DetailsPro";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#addtocart").click(function () {
+            var model = {};
+            model.id = @Model.id;
+            model.Quantity = $("#ipQuantity").val();
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddToCart", "Cart")',
+                data: JSON.stringify(model),
+                dataType: "Json",
+                contentType: "application/json; charset = utf-8",
+                success: function () {
+                    alert("Thên giỏ hàng thành công!")
+                    $('#CartCount').text(@Session["count"] + 1);
+                },
+                error: function () {
+                    alert("Lỗi trong khi thêm vào giỏ hàng!");
+                }
+            });
+            return false;
+        });
+    });
+</script>
 <div class="single-product mt-150 mb-150">
     <div class="container">
         <div class="row">
@@ -18,13 +43,19 @@
                     <h3>@Model.tenSP</h3>
                     <p class="single-product-pricing"><span></span>@Model.gia.GetValueOrDefault(0).ToString("N0") VND</p>
                     <p>@Model.mota</p>
+
+
+
                     <div class="single-product-form">
                         <form action="#">
-                            <input type="number" placeholder="1">
+                            <input type="number" id="ipQuantity" placeholder="1" value="1">
                         </form>
-                        <a href="@Url.Action("Cart","Cart")" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <a href="#" id="addtocart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                         <p><strong>Thuộc dòng: </strong>@Model.Loai_San_Pham.tenloaiSP</p>
                     </div>
+
+
+
                     <h4>Share:</h4>
                     <ul class="product-share">
                         <li><a href=""><i class="fab fa-facebook-f"></i></a></li>

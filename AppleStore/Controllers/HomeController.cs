@@ -18,23 +18,13 @@ namespace AppleStore.Controllers
             return View(db.San_Pham.ToList().ToPagedList(page,pagesize));
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+ 
         public ActionResult DetailsPro(int id)
         {
             San_Pham pro = db.San_Pham.SingleOrDefault(n => n.id == id);
             return View(pro);
         }
+
+
     }
 }

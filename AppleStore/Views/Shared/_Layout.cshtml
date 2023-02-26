@@ -8,7 +8,7 @@
     <!-- title -->
     <title>AppleStore</title>
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/png" href="/Content/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="~/Content/assets/img/team/applelogoshortcut.png">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -69,12 +69,20 @@
                                 </li>
                                 <li><a href="@Url.Action("Index","Home")">Contact</a></li>
                                 <li>
-                                    <a href="@Url.Action("Index","Home")">Shop</a>
+                                <a href="@Url.Action("Index","Home")">Shop</a></li>
+                                <li>
+                                    <a >Acount</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">Register</a></li>
+
+                                    </ul>
                                 </li>
                                 <li>
                                 <li>
                                     <div class="header-icons">
-                                        <a class="shopping-cart" href="@Url.Action("Cart","Cart")"><i class="fas fa-shopping-cart"></i></a>
+
+                                        <a class="shopping-cart" href="@Url.Action("Index","Cart")"><i class="fas fa-shopping-cart"></i> <span id="CartCount">@Session["count"]</span></a>
 
                                         <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                                     </div>
