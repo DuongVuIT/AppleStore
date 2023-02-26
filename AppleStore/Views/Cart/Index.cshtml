@@ -1,38 +1,106 @@
-﻿
+﻿@model IEnumerable<AppleStore.Models.Cart>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $("#updatecart").click(function () {
+            var lstsanpham = $('.txtquantity');
+            var cartlst = [];
+            $.each(lstsanpham, function (i, item) {
+                cartlst.push({
+                    Quantity: $(item).val(),
+                    San_Pham: {
+                        id: $(item).data('id')
+                    }
+                });
+            });
+
+            $.ajax({
+                url: '@Url.Action("Update", "Cart")',
+                data: { cartModel: JSON.stringify(cartlst) },
+                dataType: "json",
+                type: 'POST',
+                success: function (res) {
+                    if (res.status == true) {
+                        window.location.href = "@Url.Action("Index", "Cart")"
+                    }
+
+                }
+            })
+        });
+
+
+
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+
+        $("#removecart").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                data: { id: $(this).data('id') },
+                url: '@Url.Action("Remove", "Cart")',
+                dataType: "json",
+                type: 'POST',
+                success: function (res) {
+                    if (res.status == true) {
+                        window.location.href = "@Url.Action("Index", "Cart")"
+                    }
+
+                }
+            });
+        });
+    });
+</script>
+
 
 <div class="cart-section mt-150 mb-150">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
-                <div class="cart-table-wrap">
-                    <table class="cart-table">
-                        <thead class="cart-table-head">
-                            <tr class="table-head-row">
-                                <th class="product-remove"></th>
-                                <th class="product-image">Product Image</th>
-                                <th class="product-name">Name</th>
-                                <th class="product-price">Price</th>
-                                <th class="product-quantity">Quantity</th>
-                                <th class="product-total">Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table-body-row">
-                                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                <td class="product-image"><img src="/Content/assets/img/products/product-img-1.jpg" alt=""></td>
-                                <td class="product-name">Strawberry</td>
-                                <td class="product-price">$85</td>
-                                <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                <td class="product-total">1</td>
-                            </tr>
+                @if (Model != null)
+                {
+                    <div class="cart-table-wrap">
+                        <table class="cart-table">
+                            <thead class="cart-table-head">
+                                <tr class="table-head-row">
+                                    <th class="product-remove"></th>
+                                    <th class="product-image">Product Image</th>
+                                    <th class="product-name">Name</th>
+                                    <th class="product-price">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-total">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="table-body-row">
+                                        <td class="product-remove"><a href="#" data-id="@item.San_Pham.id" id="removecart"><i class="far fa-window-close"></i></a></td>
+                                        <td class="product-image"><img src="~/Images/@item.San_Pham.hinh" alt=""></td>
+                                        <td class="product-name">@item.San_Pham.tenSP</td>
+                                        <td class="product-price">@item.San_Pham.gia</td>
+                                        <td class="product-quantity"><input type="number" class="txtquantity" data-id="@item.San_Pham.id" placeholder="@item.Quantity" value="@item.Quantity"></td>
+                                        <td class="product-total">@((item.San_Pham.gia.GetValueOrDefault(0) * item.Quantity).ToString("N0")) VND</td>
+                                    </tr>
+                                }
 
-                        </tbody>
-                    </table>
-                </div>
+
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
+                }
+
+
             </div>
 
             <div class="col-lg-4">
@@ -60,7 +128,7 @@
                         </tbody>
                     </table>
                     <div class="cart-buttons">
-                        <a href="cart.html" class="boxed-btn">Update Cart</a>
+                        <a href="" class="boxed-btn" id="updatecart">Update Cart</a>
                         <a href="@Url.Action("Checkout","Checkout")" class="boxed-btn black">Check Out</a>
                     </div>
                 </div>
@@ -70,4 +138,3 @@
         </div>
     </div>
 </div>
-

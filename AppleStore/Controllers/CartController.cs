@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace AppleStore.Controllers
 {
@@ -13,7 +14,7 @@ namespace AppleStore.Controllers
         // GET: Cart
         public ActionResult Index()
         {
-          return View();
+            return View((List<Cart>)Session["cart"]);
         }
         public ActionResult AddToCart(int id, int quantity)
         {
@@ -53,6 +54,36 @@ namespace AppleStore.Controllers
                     return i;
             }
             return -1;
+        }
+        public JsonResult Update(string cartModel)
+        {
+            var jsonCart = new JavaScriptSerializer().Deserialize<List<Cart>>(cartModel);
+            var cart = (List<Cart>)Session["cart"];
+            foreach (var item in cart)
+            {
+                var jsonItem = jsonCart.SingleOrDefault(n => n.San_Pham.id == item.San_Pham.id);
+                if (jsonItem != null)
+                {
+                    item.Quantity = jsonItem.Quantity;
+
+                }
+            }
+            Session["cart"] = cart;
+            return Json(new
+            {
+                status = true
+            });
+        }
+        public JsonResult Remove(int id)
+        {
+            var cart = (List<Cart>)Session["cart"];
+            cart.RemoveAll(n => n.San_Pham.id == id);
+            Session["cart"] = cart;
+            Session["count"] = Convert.ToInt32(Session["count"]) - 1;
+            return Json(new
+            {
+                status = true
+            });
         }
 
     }
