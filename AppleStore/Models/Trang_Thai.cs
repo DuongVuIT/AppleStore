@@ -6,19 +6,16 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 namespace AppleStore.Models
 {
     using System;
     using System.Collections.Generic;
-    
     public partial class Trang_Thai
     {
         public Trang_Thai()
         {
             this.Don_Hang = new HashSet<Don_Hang>();
         }
-    
         public int id { get; set; }
         public string trangthai { get; set; }
     

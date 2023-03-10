@@ -20,6 +20,7 @@ namespace AppleStore.Models
         }
     
         public int id { get; set; }
+
         public string ten { get; set; }
         public string SDT { get; set; }
         public string email { get; set; }

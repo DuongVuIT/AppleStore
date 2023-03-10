@@ -19,14 +19,21 @@ namespace AppleStore.Models
         {
             this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
         }
-        [Display(Name = "Tên s?n ph?m")]
+        
         public int id { get; set; }
+        [Display(Name = "Ten San Pham")]
         public string tenSP { get; set; }
+        [Display(Name = "Hinh Anh")]
         public string hinh { get; set; }
+        [Display(Name = "Gia")]
         public Nullable<double> gia { get; set; }
+        [Display(Name = "Mo Ta")]
         public string mota { get; set; }
+        [Display(Name = "Trang Thai")]
         public Nullable<bool> trangthai { get; set; }
+        [Display(Name = "Ngay Dang Hinh ")]
         public Nullable<System.DateTime> ngaydanghinh { get; set; }
+        [Display(Name = "Ten Loai San Pham")]
         public int idloaiSP { get; set; }
     
         public virtual ICollection<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }

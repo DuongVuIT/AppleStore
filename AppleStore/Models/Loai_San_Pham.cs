@@ -14,7 +14,7 @@ namespace AppleStore.Models
         }
     
         public int id { get; set; }
-        [DisplayName("Tên lo?i s?n ph?m")]
+        [DisplayName("Ten Loai San Pham")]
         [Required]
         public string tenloaiSP { get; set; }
     

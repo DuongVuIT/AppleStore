@@ -11,7 +11,8 @@ namespace AppleStore.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Nguoi_Dung
     {
         public Nguoi_Dung()
@@ -20,12 +21,19 @@ namespace AppleStore.Models
         }
     
         public int id { get; set; }
+        [DisplayName("Loai Tai Khoan")]
         public string taikhoan { get; set; }
+        [DisplayName("Mat Khau")]
         public string matkhau { get; set; }
+        [DisplayName("Ten")]
         public string ten { get; set; }
+
         public string SDT { get; set; }
+        [DisplayName("Email")]
         public string email { get; set; }
+        [DisplayName("Dia Chi")]
         public string diachi { get; set; }
+        [DisplayName("Quyen")]
         public Nullable<int> quyen { get; set; }
     
         public virtual ICollection<Don_Hang> Don_Hang { get; set; }
