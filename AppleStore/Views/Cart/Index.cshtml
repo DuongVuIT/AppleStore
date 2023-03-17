@@ -85,7 +85,7 @@
                                         <td class="product-image"><img src="~/Images/@item.San_Pham.hinh" alt=""></td>
                                         <td class="product-name">@item.San_Pham.tenSP</td>
                                         <td class="product-price">@item.San_Pham.gia</td>
-                                        <td class="product-quantity"><input type="number" class="txtquantity" data-id="@item.San_Pham.id" placeholder="@item.Quantity" value="@item.Quantity"></td>
+                                        <td class="product-quantity"><input type="number" min="1" class="txtquantity" data-id="@item.San_Pham.id" placeholder="@item.Quantity" value="@item.Quantity"></td>
                                         <td class="product-total">@((item.San_Pham.gia.GetValueOrDefault(0) * item.Quantity).ToString("N0")) VND</td>
                                     </tr>
                                 }
