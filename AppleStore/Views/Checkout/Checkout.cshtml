@@ -58,7 +58,7 @@
                                 {
                                     <tr>
                                         <td>@item.San_Pham.tenSP</td>
-                                        <td>@item.San_Pham.gia</td>
+                                        <td>@item.San_Pham.gia.GetValueOrDefault(0).ToString("N0")</td>
                                     </tr>
                                 }
 
