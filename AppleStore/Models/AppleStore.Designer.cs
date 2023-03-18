@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\Models\AppleStore.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\ACER\Source\Repos\AppleStore\AppleStore\Models\AppleStore.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
