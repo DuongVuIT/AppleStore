@@ -4,7 +4,31 @@
     ViewBag.Title = "ProductsCategories";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function AddToCart(id_pr) {
+        var model = {};
+        model.id = id_pr;
+        model.Quantity = 1;
+        $.ajax({
+            type: "POST",
+            url: "/Cart/AddToCart",
+            data: JSON.stringify(model),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function () {
+                alert("Thêm vào giỏ hàng thành công!");
+                var cartCount = parseInt($('#CartCount').text()) || 0;
+                $('#CartCount').text(cartCount + 1);
+            },
+            error: function () {
+                alert("Lỗi trong khi thêm vào giỏ hàng!");
+            }
+        });
+        return false;
 
+    }
+</script>
 <div class="product-section mt-150 mb-150">
     <div class="container">
 
@@ -37,7 +61,7 @@
                         </div>
                         <h3>@item.tenSP </h3>
                         <p class="product-price"><span></span>@item.gia.GetValueOrDefault(0).ToString("N0") VND</p>
-                        <a href="@Url.Action("Index","Cart")" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <a onclick="AddToCart(@item.id)" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                     </div>
                 </div>
             }

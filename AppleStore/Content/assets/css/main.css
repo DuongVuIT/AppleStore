@@ -413,9 +413,9 @@ p:last-child {
 a.boxed-btn {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
-  background-color: #F28123;
+  background-color: black;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 31px;
 }
 
 a.bordered-btn {
@@ -2400,7 +2400,7 @@ ul.social-link-team li a {
 .product-filters ul li.active {
  
   background-color: #F28123;
-  color: #fff;
+  color: black;
 }
 
 .single-product-item {
