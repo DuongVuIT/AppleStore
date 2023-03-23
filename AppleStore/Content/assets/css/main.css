@@ -17,7 +17,14 @@ html {
   line-height: 28px;
   height: 100%;
 }
-
+button.boxed-btn.black {
+    border-radius: 50px;
+    padding: 10px 31px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-family: 'Poppins';
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;

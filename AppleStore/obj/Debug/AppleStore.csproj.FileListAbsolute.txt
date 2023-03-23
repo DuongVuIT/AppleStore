@@ -168,3 +168,5 @@ C:\Users\ACER\source\repos\AppleStore\AppleStore\obj\Debug\AppleStore.csproj.Cor
 C:\Users\ACER\source\repos\AppleStore\AppleStore\obj\Debug\AppleStore.csproj.CopyComplete
 C:\Users\ACER\source\repos\AppleStore\AppleStore\obj\Debug\AppleStore.dll
 C:\Users\ACER\source\repos\AppleStore\AppleStore\obj\Debug\AppleStore.pdb
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.SqlServer.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.SqlServer.xml

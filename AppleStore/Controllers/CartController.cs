@@ -11,7 +11,9 @@ namespace AppleStore.Controllers
     public class CartController : Controller
     {
         AppleStoreEntities db = new AppleStoreEntities();
+       
         // GET: Cart
+
         public ActionResult Index()
         {
             return View((List<Cart>)Session["cart"]);
@@ -85,6 +87,12 @@ namespace AppleStore.Controllers
                 status = true
             });
         }
-
-    }
+        
+        public ActionResult Checkout()
+        {
+            return View((List<Cart>)Session["cart"]);
+        }
+        
+    
+}
 }

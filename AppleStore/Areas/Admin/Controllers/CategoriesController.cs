@@ -69,7 +69,7 @@ namespace AppleStore.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Edit (int id, Loai_San_Pham lsp)
         {
-            db.Entry(lsp).State = EntityState.Modified;
+            db.Entry(lsp).State = (System.Data.Entity.EntityState)EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

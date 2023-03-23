@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace AppleStore.Areas.Admin.Controllers
 {
+    
     public class ProductsController : Controller
     {
         AppleStoreEntities db = new AppleStoreEntities();
@@ -90,7 +91,7 @@ namespace AppleStore.Areas.Admin.Controllers
                 ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Images"), fileName));
             }
 
-            db.Entry(sp).State = EntityState.Modified;
+            db.Entry(sp).State = (System.Data.Entity.EntityState)EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

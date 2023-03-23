@@ -23,13 +23,18 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <div class="billing-address-form">
-                                            <form action="index.html">
-                                                <p><input type="text" placeholder="Name"></p>
-                                                <p><input type="email" placeholder="Email"></p>
-                                                <p><input type="text" placeholder="Address"></p>
-                                                <p><input type="tel" placeholder="Phone"></p>
-                                                <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-                                            </form>
+                                            @using (Html.BeginForm("Checkout", "Checkout", FormMethod.Post))
+                                            {
+                                                <form>
+
+                                                    <p><input name="ten" type="text" placeholder="Name"></p>
+                                                    <p><input name="email" type="email" placeholder="Email"></p>
+                                                    <p><input type="text" name="diachi" placeholder="Address"></p>
+                                                    <p><input type="tel" name="SDT" placeholder="Phone"></p>
+                                                    <p><textarea name="tieude" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
+                                                    <button type="submit" class="boxed-btn black">Place Order</button>
+                                                </form>
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -67,17 +72,16 @@
                                 <tr>
                                     <td>Subtotal</td>
                                     <td>
-                                        @if (Session["cart"] != null)
-                                        {
-                                            <a class="primary-btn ">
-                                                @(Model.Sum(n => n.Quantity * n.San_Pham.gia.GetValueOrDefault(0)).ToString("N0")) VND
-                                            </a>
-                                        }
+
+                                        <a class="primary-btn ">
+                                            @(Model.Sum(n => n.Quantity * n.San_Pham.gia.GetValueOrDefault(0)).ToString("N0")) VND
+                                        </a>
+
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="#" class="boxed-btn">Place Order</a>
+                      
                     </div>
                 </div>
             }
