@@ -11,7 +11,8 @@ namespace AppleStore.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Don_Hang
     {
         public Don_Hang()
@@ -20,13 +21,18 @@ namespace AppleStore.Models
         }
     
         public int id { get; set; }
-
+        [DisplayName("TEN")]
         public string ten { get; set; }
         public string SDT { get; set; }
+        [DisplayName("EMAIL")]
         public string email { get; set; }
+        [DisplayName("DIACHI")]
         public string diachi { get; set; }
+        [DisplayName("TIEUDE")]
         public string tieude { get; set; }
+        [DisplayName("NGAYTAO")]
         public Nullable<System.DateTime> ngaytao { get; set; }
+        [DisplayName("TONGTIEN")]
         public Nullable<double> tongtien { get; set; }
         public Nullable<int> idtrangthai { get; set; }
         public Nullable<int> idNgDung { get; set; }

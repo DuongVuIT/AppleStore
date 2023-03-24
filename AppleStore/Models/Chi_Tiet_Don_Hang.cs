@@ -11,13 +11,18 @@ namespace AppleStore.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Chi_Tiet_Don_Hang
     {
         public int id { get; set; }
+        [DisplayName("TEN")]
         public string tenSP { get; set; }
+        [DisplayName("GIA")]
         public Nullable<double> gia { get; set; }
+        [DisplayName("SO LUONG")]
         public Nullable<int> soluong { get; set; }
+        [DisplayName("TONG GIA")]
         public Nullable<double> tonggia { get; set; }
         public int idSP { get; set; }
         public int idDonHang { get; set; }
