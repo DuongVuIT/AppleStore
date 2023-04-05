@@ -170,3 +170,23 @@ C:\Users\ACER\source\repos\AppleStore\AppleStore\obj\Debug\AppleStore.dll
 C:\Users\ACER\source\repos\AppleStore\AppleStore\obj\Debug\AppleStore.pdb
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.SqlServer.dll
 E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\EntityFramework.SqlServer.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\Castle.Core.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\Moq.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\nunit.framework.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\System.Threading.Tasks.Extensions.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\Castle.Core.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\Moq.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\nunit.framework.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\System.Threading.Tasks.Extensions.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\Moq.AutoMock.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\NonBlocking.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\System.ValueTuple.dll
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\Moq.AutoMock.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\NonBlocking.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\System.ValueTuple.xml
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\selenium-manager\linux\selenium-manager
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\selenium-manager\macos\selenium-manager
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\selenium-manager\windows\selenium-manager.exe
+E:\Workspace\Đồ án asp.net\AppleStore\AppleStore\AppleStore\bin\WebDriver.dll
