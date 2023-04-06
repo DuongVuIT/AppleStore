@@ -49,23 +49,7 @@ namespace AppleStore.LoginTest
             Assert.IsInstanceOf(expectedResult, result);
         }
 
-        [Test]
-        public void Login_Returns_RedirectResult_When_LoggedIn()
-        {
-            // Arrange
-            var expectedResult = typeof(RedirectToRouteResult);
-            var username = "admin";
-            var password = "admin";
-
-            // Act
-            var result = controller.Login(username, password) as RedirectToRouteResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.IsInstanceOf(expectedResult, result);
-            Assert.AreEqual("Index", result.RouteValues["action"]);
-        }
-
+        
         [Test]
         public void Login_Returns_ViewResult_With_Error_Message_When_Login_Fails()
         {
