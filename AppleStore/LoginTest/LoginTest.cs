@@ -3,14 +3,12 @@ using AppleStore.Controllers;
 using AppleStore.Models;
 using Moq;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace AppleStore.LoginTest
 {
+    [TestFixture]
     public class LoginTest
     {
         private Mock<HttpSessionStateBase> sessionMock;
@@ -38,6 +36,8 @@ namespace AppleStore.LoginTest
         public void Login_Success()
         {
             // Arrange
+            // Arrange
+            
             var taikhoan = "admin";
             var matkhau = "admin";
 
@@ -47,6 +47,7 @@ namespace AppleStore.LoginTest
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual("Index", result.RouteValues["action"]);
+
         }
 
         [Test]
@@ -77,14 +78,17 @@ namespace AppleStore.LoginTest
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.IsFalse(controller.ModelState.IsValid);
-            Assert.IsTrue(controller.ViewBag.errortk == "Tài khoản không đúng");
+            Assert.That(controller.ModelState.IsValid, Is.False);
+            Assert.That(controller.ViewBag.errortk, Is.EqualTo("Tài khoản không đúng"));
         }
 
         [TearDown]
         public void TearDown()
         {
-            db.Dispose();
+            if (db != null)
+            {
+                db.Dispose();
+            }
         }
     }
 }
