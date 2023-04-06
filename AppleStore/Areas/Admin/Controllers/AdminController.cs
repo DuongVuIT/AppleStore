@@ -9,6 +9,7 @@ namespace AppleStore.Areas.Admin.Controllers
 {
     public class AdminController : Controller
     {
+ 
         // GET: Admin/Admin
         AppleStoreEntities db = new AppleStoreEntities();
         public ActionResult Index()
@@ -32,28 +33,31 @@ namespace AppleStore.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(string taikhoan, string matkhau)
         {
+            
             if (ModelState.IsValid)
             {
-
+           
                 var data = db.Nguoi_Dung.Where(n => n.taikhoan.Equals(taikhoan) && n.matkhau.Equals(matkhau));
+              
                 if (data.Count() > 0)
                 {
+                   
                     Session["ten"] = data.FirstOrDefault().ten;
                     Session["quyen"] = data.FirstOrDefault().quyen;
                     Session["id"] = data.FirstOrDefault().id;
                     if (Session["quyen"] == null)
                     {
-                        return Redirect("~");
+                        return View("Login");
                     }
                     else
                     {
-                        return RedirectToAction("Index");
+                        return View("Index");
                     }
                 }
                 else
                 {
                     ViewBag.error = "Đăng nhập thất bại";
-                    return RedirectToAction("Login");
+                    return View("Login");
                 }
             }
             return View();
